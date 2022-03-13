@@ -1,7 +1,5 @@
 <launch>
-  <arg name="multi_robot_name"       default="turtlebot3_manipulation"/>
-
-  <group ns="$(arg multi_robot_name)">
+  <arg name="multi_robot_name"       default=""/>
 
   <node pkg="turtlebot3_manipulation_bringup" type="turtlebot3_manipulation_bringup" name="turtlebot3_manipulation_bringup" output="screen"/>
 
@@ -17,5 +15,4 @@
     <rosparam command="load" file="$(find turtlebot3_manipulation_slam)/config/scan_data_filter.yaml" />
   </node>
 
-  </group>
 </launch>
